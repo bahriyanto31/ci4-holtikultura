@@ -38,7 +38,10 @@ $routes->get('/logout', 'Auth\AuthLogin::logout');
 
 /* Main Web */
 $routes->get('/main', 'Home::index');
-$routes->get('/web/dashboard', 'Web\Dashboard::index');
+
+$routes->group('web', ['filter' => 'authlogin'], function ($routes) {
+    $routes->get('dashboard', 'Web\Dashboard::index');
+});
 
 /*
  * --------------------------------------------------------------------
