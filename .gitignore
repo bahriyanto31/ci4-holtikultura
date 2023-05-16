@@ -41,7 +41,7 @@ $RECYCLE.BIN/
 #-------------------------
 # These should never be under version control,
 # as it poses a security risk.
-.env
+# .env
 .vagrant
 Vagrantfile
 
@@ -57,8 +57,8 @@ writable/logs/*
 writable/session/*
 !writable/session/index.html
 
-writable/uploads/*
-!writable/uploads/index.html
+# writable/uploads/*
+# !writable/uploads/index.html
 
 writable/debugbar/*
 
@@ -83,7 +83,7 @@ phpunit
 #-------------------------
 # Composer
 #-------------------------
-vendor/
+# vendor/
 
 #-------------------------
 # IDE / Development Files
