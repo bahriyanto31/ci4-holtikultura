@@ -15,6 +15,7 @@
 <!-- endbuild -->
 
 <!-- Vendors JS -->
+<script src="assets/vendor/libs/moment/moment.js"></script>
 <script src="assets/vendor/libs/toastr/toastr.js"></script>
 
 <!-- Main JS -->

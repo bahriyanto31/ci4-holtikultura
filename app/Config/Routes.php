@@ -43,6 +43,16 @@ $routes->group('web', ['filter' => 'authlogin'], function ($routes) {
     $routes->get('dashboard', 'Web\Dashboard::index');
 });
 
+$routes->group('admin', ['filter' => 'authlogin'], function ($routes) {
+    $routes->group('wilayah', function ($routes) {
+        $routes->get('/', 'Admin\Wilayah::index');
+        $routes->post('create', 'Admin\Wilayah::create');
+        $routes->post('update/(:num)', 'Admin\Wilayah::update/$1');
+        $routes->get('delete/(:num)', 'Admin\Wilayah::delete/$1');
+    });
+    $routes->get('users', 'Admin\Users::index');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

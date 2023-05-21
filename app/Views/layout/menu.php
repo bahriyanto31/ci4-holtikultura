@@ -7,7 +7,7 @@
             </span>
             <span class="app-brand-text demo menu-text fw-bold mt-3" style="font-family: 'Righteous', cursive;"><?= $_ENV['APP_Name']; ?></span>
         </a>
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+        <a id="click-disini" href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
             <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
             <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
         </a>
@@ -17,16 +17,22 @@
 
     <ul class="menu-inner py-1">
         <!-- Page -->
-        <li class="menu-item active">
+        <li class="menu-item">
             <a href="<?= base_url('web/dashboard') ?>" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
-                <div data-i18n="Page 1">Dashboard</div>
+                <div data-i18n="Dashboard">Dashboard</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="page-2.html" class="menu-link">
+            <a href="<?= base_url('admin/wilayah') ?>" class="menu-link">
+                <i class="menu-icon tf-icons ti  ti-map"></i>
+                <div data-i18n="Wilayah">Wilayah</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="<?= base_url('admin/users') ?>" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-app-window"></i>
-                <div data-i18n="Page 2">Data</div>
+                <div data-i18n="Users">Users</div>
             </a>
         </li>
     </ul>

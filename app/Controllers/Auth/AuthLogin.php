@@ -3,7 +3,7 @@
 namespace App\Controllers\Auth;
 
 use App\Controllers\BaseController;
-use App\Models\ModelUsers;
+use App\Models\ModelAuth;
 use CodeIgniter\Exceptions\PageNotFoundException;
 
 class AuthLogin extends BaseController
@@ -12,7 +12,7 @@ class AuthLogin extends BaseController
     {
         // validate csrf token
         if (service('validateCSRF_auth')) {
-            $db = new ModelUsers();
+            $db = new ModelAuth();
             $user = request()->getVar('username');
             $pass = request()->getVar('password');
             // cek authentication

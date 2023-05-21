@@ -5,7 +5,7 @@
     <base href="<?= base_url(); ?>">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <title><?= $_ENV['APP_Name']; ?></title>
+    <title><?= $_ENV['APP_Name']; ?><?= (isset($title)) ? " - " . $title : "" ?></title>
     <meta name="description" content="<?= $_ENV['APP_Dekripsi']; ?>" />
     <?= $this->include('layout/head'); ?>
     <?= $this->renderSection('costum_css'); ?>
@@ -35,6 +35,7 @@
             <!-- Drag Target Area To SlideIn Menu On Small Screens -->
             <div class="drag-target"></div>
         </div>
+
         <!-- / Layout wrapper -->
         <?= $this->include('layout/script'); ?>
         <?= $this->renderSection('costum_script'); ?>

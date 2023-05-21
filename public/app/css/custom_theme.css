@@ -1,0 +1,26 @@
+#template-customizer .template-customizer-open-btn {
+    position: absolute !important;
+    bottom: 40px !important;
+    top: unset !important;
+}
+
+
+.bg-navbar-theme .navbar-nav>.nav-link,
+.bg-navbar-theme .navbar-nav>.nav-item>.nav-link,
+.bg-navbar-theme .navbar-nav>.nav>.nav-item>.nav-link {
+    color: white
+}
+
+.bg-navbar-theme {
+    background-color: #2E3248 !important;
+    color: #6f6b7d;
+}
+
+#toast-container>div {
+    padding: 10px 10px 10px 50px;
+    opacity: 1;
+}
+
+.toast-message {
+    font-size: 12px;
+}
