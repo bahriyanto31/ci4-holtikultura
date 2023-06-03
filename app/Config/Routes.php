@@ -53,6 +53,10 @@ $routes->group('admin', ['filter' => 'authlogin'], function ($routes) {
     $routes->get('users', 'Admin\Users::index');
 });
 
+/* sample */
+$routes->group('sample', ['filter' => NULL], function ($routes) {
+    $routes->get('datatable', 'Sample\Datatables::index');
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

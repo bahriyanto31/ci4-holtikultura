@@ -35,6 +35,20 @@
                 <div data-i18n="Users">Users</div>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-file-description"></i>
+                <div data-i18n="Dokumentasi">Dokumentasi</div>
+                <div class="badge bg-label-warning rounded-pill ms-auto">1</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="<?= base_url('sample/datatable') ?>" class="menu-link">
+                        <div data-i18n="Datatables">Datatables</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </aside>
 <!-- / Menu -->

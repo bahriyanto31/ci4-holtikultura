@@ -15,9 +15,12 @@
 <!-- endbuild -->
 
 <!-- Vendors JS -->
+
+<?= $this->renderSection('vendor_js'); ?>
 <script src="assets/vendor/libs/moment/moment.js"></script>
 <script src="assets/vendor/libs/toastr/toastr.js"></script>
 
+<!-- Main JS -->
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
 <script src="app/js/app.js"></script>

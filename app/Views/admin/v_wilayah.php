@@ -1,13 +1,9 @@
 <?= $this->extend('main_layout'); ?>
 <?= $this->section('custom_css'); ?>
-<link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/node-waves/node-waves.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/select2/select2.css" />
-<link rel="stylesheet" href="../../assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+<link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+<link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+<link rel="stylesheet" href="assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+<link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -15,7 +11,12 @@
     <!-- Users List Table -->
     <div class="card">
         <div class="card-header border-bottom p-3">
-            <h5 class="card-title m-0">Daftar <?= $title ?></h5>
+            <div class="card-title header-elements p-0 m-0">
+                <h4 class="m-0 me-2">Daftar <?= $title ?></h4>
+                <div class="card-title-elements ms-auto">
+                    <span class="badge bg-primary rounded-pill">Data : <b><?= count($datatable) ?></b></span>
+                </div>
+            </div>
         </div>
         <!-- Offcanvas -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas_add">
@@ -27,14 +28,14 @@
                 <form class="pt-0" action="<?= base_url('admin/wilayah/create') ?>" method="post">
                     <div class="mb-3">
                         <label class="form-label">Nama Wilayah</label>
-                        <input type="text" name="nama_wilayah" placeholder="Masukkan Nama Wilayah" class="form-control" />
+                        <input type="text" name="nama_wilayah" placeholder="Masukkan Nama Wilayah" class="form-control" required />
                     </div>
                     <button type="submit" class="btn btn-primary me-sm-1 me-1 data-submit">Simpan</button>
                     <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="offcanvas">Cancel</button>
                 </form>
             </div>
         </div>
-        <div class="card-datatable table-responsive">
+        <div class="table-responsive">
             <table class="table border-top datatables-users">
                 <thead>
                     <tr>
@@ -70,7 +71,7 @@
                         <form class="pt-0" action="<?= base_url('admin/wilayah/update/' . $d['id_wilayah']) ?>" method="post">
                             <div class="mb-3">
                                 <label class="form-label">Nama Wilayah</label>
-                                <input type="text" name="nama_wilayah" value="<?= $d['nama_wilayah'] ?>" placeholder="Masukkan Nama Wilayah" class="form-control" />
+                                <input type="text" name="nama_wilayah" value="<?= $d['nama_wilayah'] ?>" placeholder="Masukkan Nama Wilayah" class="form-control" required />
                             </div>
                             <button type="submit" class="btn btn-primary me-sm-1 me-1 data-submit">Simpan</button>
                             <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="offcanvas">Cancel</button>
@@ -81,7 +82,6 @@
         </div>
     </div>
 </div>
-
 <?= $this->endSection(); ?>
 <?= $this->section('custom_script'); ?>
 <script src="assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>

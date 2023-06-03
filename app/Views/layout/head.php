@@ -24,6 +24,9 @@
 <link rel="stylesheet" href="assets/vendor/libs/toastr/toastr.css" />
 <link rel="stylesheet" href="assets/vendor/libs/animate-css/animate.css" />
 
+<!-- Vendors CSS -->
+<?= $this->renderSection('vendor_css'); ?>
+
 
 <!-- Page CSS -->
 
